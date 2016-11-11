@@ -1,0 +1,5 @@
+<form class="" name="userData">
+    Email ::<input type="email" name="name" ng-model="data.username" required /><br>
+    Password<input type="password" name="name" ng-minlength="8" ng-maxlength="24" ng-model="data.password" required /><br>
+    <button type="submit" ng-click="signup()" ng-disabled="userData.$invalid">Sign Up</button>
+</form>

@@ -1,0 +1,18 @@
+<h2>User data</h2>
+<a href="#">Sign up</a>| <a ui-sref="changePassword"> Change Password</a>
+<table>
+<tr>
+  <th>
+    username
+  </th>
+  <th>
+    password
+  </th>
+</tr>
+
+<tr ng-repeat="data in userData">
+  <td>{{data.username}}</td>
+  <td>{{data.password}}</td>
+</tr>
+
+</table>
