@@ -15,26 +15,26 @@ var router = express.Router();
 /***Post Request for creating new User and insert Data in mongoDB***/
 router.post('/', function(req, res) {
 
-creatUserModel.createUser(mongodb,url,req.body,function(result){
-res.send(result);
-});
+    creatUserModel.createUser(mongodb, url, req.body, function(result) {
+        res.send(result);
+    });
 
 }); //end of post
 
 /****GET call is used to retreiving User data from mongoDB***/
 router.get("/", function(req, res) {
 
-getUserModel.getUser(mongodb,url,req.body,function(result){
-  res.send(result);
-});
-});//end get call
+    getUserModel.getUser(mongodb, url, req.body, function(result) {
+        res.send(result);
+    });
+}); //end get call
 
 /***PUT call is used to upadate the User data***/
 router.put("/", function(req, res) {
 
-updateUserModel.updateUser(mongodb,url,req.body,function(result){
-res.send(result);
-});
+    updateUserModel.updateUser(mongodb, url, req.body, function(result) {
+        res.send(result);
+    });
 });
 
 module.exports = router;

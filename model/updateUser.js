@@ -2,7 +2,7 @@ var myUpadteUser = {};
 
 myUpadteUser.updateUser = function(MongoClient, url, data, callback) {
 
-console.log("upda te data :: ",data);
+    console.log("upda te data :: ", data);
     // Use connect method to connect to the Server
     MongoClient.connect(url, function(err, db) {
         if (err) {
@@ -26,7 +26,7 @@ console.log("upda te data :: ",data);
                         "error": err
                     });
                     console.log(err);
-                } else if (JSON.parse(numUpdated).n>0) {
+                } else if (JSON.parse(numUpdated).n > 0) {
                     callback({
                         "data": numUpdated
                     });
@@ -35,7 +35,7 @@ console.log("upda te data :: ",data);
                     callback({
                         "error": "No Data Found"
                     });
-                    console.log('No document found with defined "find" criteria!'+numUpdated);
+                    console.log('No document found with defined "find" criteria!' + numUpdated);
                 }
                 //Close connection
                 db.close();
